@@ -588,7 +588,7 @@ void digits_overflow()
 /***************************************************************/
 
 
-linrat(Na,Da,ka,Nb,Db,kb,Nc,Dc) 
+void linrat(Na,Da,ka,Nb,Db,kb,Nc,Dc) 
 	/* computes Nc/Dc = ka*Na/Da  +kb* Nb/Db 
 	   and reduces answer by gcd(Nc,Dc) */
 mp Na,Da,Nb,Db,Nc,Dc;
@@ -603,7 +603,7 @@ reduce(Nc,Dc);
 }
 
 
-divrat(Na,Da,Nb,Db,Nc,Dc) 
+void divrat(Na,Da,Nb,Db,Nc,Dc) 
 	/* computes Nc/Dc = (Na/Da)  / ( Nb/Db )
 	   and reduces answer by gcd(Nc,Dc) */
 mp Na,Da,Nb,Db,Nc,Dc;
@@ -614,7 +614,7 @@ reduce(Nc,Dc);
 }
  
 
-mulrat(Na,Da,Nb,Db,Nc,Dc) 
+void mulrat(Na,Da,Nb,Db,Nc,Dc) 
 	/* computes Nc/Dc = Na/Da  * Nb/Db
 	   and reduces answer by gcd(Nc,Dc) */
 mp Na,Da,Nb,Db,Nc,Dc;
