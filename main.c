@@ -324,7 +324,7 @@ int main(int argc, char *argv[])
     int multipriors = 0;         /* parameter for    -M option  */
     int seed  = 0;      /* payoff seed for bintree  (-s option) */
     int newpayoffs = 0; /* number of payoffs to be replaced (-p)*/
-    int *newp1, *newp2; /* arrays for entering new payoffs      */
+    int *newp1 = 0, *newp2 = 0; /* arrays for entering new payoffs      */
 
     /* whichform currently not used (later for RSF)             */
     int whichform = 0;  /* 0: SF, 1: NF, 2: RSF                 */

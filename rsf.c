@@ -34,7 +34,7 @@ void genredsf(int pl)
     int i, j;       /* row, column counters */
     int cdim;       /* dimension of c-matrix, = no. redundant vars          */
     int drow;       /* last filled row of d-matrix for irredundant vars     */
-    Iset h, lasthinc;
+    Iset h = 0, lasthinc = 0;
     Move seq;
     /* inverse of matrix of dependent variables, local      */
     int ** depvarinv;
