@@ -197,7 +197,7 @@ void gcd(mp u, mp v)
   bigu:
     if(zero(v))
         return;
-    if ((i=length(u))<maxsplen || i==maxsplen && u[maxsplen-1]<maxspval)
+    if ((i=length(u))<maxsplen || (i==maxsplen && u[maxsplen-1]<maxspval))
         goto quickfinish;
     divint(u,v,r);
     normalize(u);
@@ -208,7 +208,7 @@ void gcd(mp u, mp v)
         copy(u,v);
         return;
         }
-    if ((i=length(v))<maxsplen || i==maxsplen && v[maxsplen-1]<maxspval)
+    if ((i=length(v))<maxsplen || (i==maxsplen && v[maxsplen-1]<maxspval))
         goto quickfinish;
     divint (v,u,r);
     normalize(v);
