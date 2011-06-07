@@ -14,6 +14,7 @@
 #include "leaves.h"
 
 /* test if input properly processed by generating what should be an echo */
+#ifdef UNUSED
 static void testreadequil (int docuseed)
 {
     printf("BEQ>%4d<1>", docuseed);
@@ -21,6 +22,7 @@ static void testreadequil (int docuseed)
     printf(" <2>");
     outbehavstrat(2, realplan[2], 1);
 }
+#endif  /* UNUSED */
 
 void leavesfrominput (void)
 {
