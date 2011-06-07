@@ -4,6 +4,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "rat.h"
 #include "treedef.h"    /* PLAYERS              */
