@@ -16,7 +16,7 @@
 /***********************************************/
 #ifndef B64
 /*32 bit machines */
-#define FORMAT "%4.4u"
+#define FORMAT "%4.4ld"
 #define MAXD 2147483647L
 #define BASE 10000L
 #define BASE_DIG 4

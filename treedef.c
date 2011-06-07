@@ -91,9 +91,9 @@ Bool genseqin(void)
 	    /* tree is not topologically sorted     */
 	    {
 	    isnotok = 1;
-	    printf("tree not topologically sorted: father %d ", 
+	    printf("tree not topologically sorted: father %ld ", 
 		    u->father - nodes);
-	    printf("is larger than node %d itself.\n", u - nodes);
+	    printf("is larger than node %ld itself.\n", u - nodes);
 	    }
     
 	/* update sequence triple, new only for move leading to  u  */
@@ -113,10 +113,10 @@ Bool genseqin(void)
 		{
 		isnotok = 1;
 		/* need output routines for isets, moves, later         */
-		printf("imperfect recall in info set no. %d ", h-isets);
+		printf("imperfect recall in info set no. %ld ", h-isets);
 		printf("named %s\n", h->name);
-		printf("different sequences no. %d,", seq-moves);
-		printf(" %d\n", h->seqin-moves);
+		printf("different sequences no. %ld,", seq-moves);
+		printf(" %ld\n", h->seqin-moves);
 		}
 	    }       /* end of "u decision node"     */
 	}           /* end of "for all nodes u"     */
@@ -184,7 +184,7 @@ int movetoa (Move c, int pl, char *s)
 	return sprintf(s, "*");
     if (c == firstmove[pl])
 	return sprintf(s, "()");
-    return sprintf(s, "%s%d", c->atiset->name, c - c->atiset->move0);
+    return sprintf(s, "%s%ld", c->atiset->name, c - c->atiset->move0);
 }       /* end of  int movetoa (c, pl, *s)      */
 
 int seqtoa (Move seq, int pl, char *s)

@@ -118,13 +118,13 @@ int stopwatch(Bool bprint)
 void infotree()
 {
     int pl;
-    printf("\nGame tree has %d nodes, ", lastnode - root);
-    printf("of which %d are terminal nodes.\n", lastoutcome - outcomes);
+    printf("\nGame tree has %ld nodes, ", lastnode - root);
+    printf("of which %ld are terminal nodes.\n", lastoutcome - outcomes);
     for (pl = 0; pl < PLAYERS; pl++)
 	{
 	printf("    Player %d has ", pl);
-	printf("%3d information sets, ", firstiset[pl+1] - firstiset[pl]);
-	printf("%3d moves in total\n", firstmove[pl+1] - firstmove[pl] - 1); 
+	printf("%3ld information sets, ", firstiset[pl+1] - firstiset[pl]);
+	printf("%3ld moves in total\n", firstmove[pl+1] - firstmove[pl] - 1); 
 	}
 }
 

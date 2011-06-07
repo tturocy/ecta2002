@@ -118,12 +118,12 @@ void prat(char name[],mp Nt,mp Dt)  /*print the long precision rational Nt/Dt  *
 	long i;
 	printf("%s",name);
 	if (sign(Nt)==NEG) printf("-");
-	printf("%u",Nt[length(Nt)-1]);
+	printf("%ld",Nt[length(Nt)-1]);
 	for (i=length(Nt)-2;i>=1;i--) printf(FORMAT,Nt[i]);
 	if( !(Dt[0]==2 && Dt[1]==1))  /* rational */
 	     { printf("/");
 	       if (sign(Dt)==NEG) printf("-");
-	       printf("%u",Dt[length(Dt)-1]);
+	       printf("%ld",Dt[length(Dt)-1]);
 	       for (i=length(Dt)-2;i>=1;i--) printf(FORMAT,Dt[i]);
 	      }
 	printf(" ");
@@ -146,7 +146,7 @@ void pmp(char name[],mp a)  /*print the long precision integer a*/
 	long i;
 	printf("%s",name);
 	if (sign(a)==NEG) printf("-");
-	printf("%u",a[length(a)-1]);
+	printf("%ld",a[length(a)-1]);
 	for (i=length(a)-2;i>=1;i--) printf(FORMAT,a[i]);
 }
 
@@ -157,7 +157,7 @@ int mptoa(mp x, char s[])
 int i, pos=0;
 if (sign(x)==NEG) 
     pos = sprintf(s, "-");
-pos += sprintf(&s[pos], "%u", x[length(x)-1] );
+pos += sprintf(&s[pos], "%ld", x[length(x)-1] );
 for (i=length(x)-2; i>=1; i--) 
     pos += sprintf(&s[pos], FORMAT, x[i]);
 return pos;
@@ -576,7 +576,7 @@ void divint(mp a, mp b, mp c )
  
 void digits_overflow()
 {
-  printf("Overflow at digits=%d\n",DIG2DEC(digits));
+  printf("Overflow at digits=%ld\n",DIG2DEC(digits));
   exit(1);
 }
 

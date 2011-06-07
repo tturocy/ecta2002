@@ -15,7 +15,8 @@ void *tmp;
 tmp = calloc(n, s);
 if (tmp==NULL)
     {
-    fprintf(stderr, "Failure to allocate %d objects of %d bytes ", n, s); 
+    fprintf(stderr, "Failure to allocate %lu objects of %lu bytes ", 
+	    (unsigned long) n, (unsigned long) s); 
     fprintf(stderr, "on line %d of %s\n", l, f);
     fprintf(stderr, "Emergency stop.\n");
     exit(1);

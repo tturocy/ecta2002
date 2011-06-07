@@ -116,7 +116,7 @@ void createbintree (int levels, int seed)
         }
     /* consistency check    */
     if (currout != lastoutcome)
-        printf("wrong number %d of outcomes!!!\n", currout-outcomes );
+        printf("wrong number %ld of outcomes!!!\n", currout-outcomes );
 }       /* end of createbintree(levels, seed)   */
 
 

@@ -104,7 +104,7 @@ void outleavesreached (int docuseed)
 	if ( reachprob.num )  /* nonzero probability of reaching leaf	*/
 	    {
 	    rattoa(reachprob, s); 
-	    printf(" %d~%s", o - outcomes, s) ;
+	    printf(" %ld~%s", o - outcomes, s) ;
 	    }
 	}
     printf("\n") ;
